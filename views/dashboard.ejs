@@ -33,7 +33,7 @@
           <img src="<%= i.imageurl %>" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title"><%= i.name %></h5>
-            <p class="card-text"><%= i.price %></p>
+            <p class="card-text"><%= "$ " + i.price %></p>
 
             <div class="col-sm">
               <form action="/products/:id" method="POST">
