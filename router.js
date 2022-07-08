@@ -17,7 +17,7 @@ router.get("/login", (req, res) => {
 router.post("/login", auth.login);
 router.post("/api/v1/auth/login", auth.akun);
 
-router.get("/dashboard", auth.dashboard);
+router.get("/dashboard", restrict, auth.dashboard);
 router.get("/dashboard/:id", auth.dashboardOne);
 
 router.get("/products", (req, res) => {

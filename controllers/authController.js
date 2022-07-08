@@ -34,7 +34,7 @@ module.exports = {
   create: (req, res, next) => {
     Products.create(req.body)
       .then(() => {
-        res.send("success");
+        res.redirect("/dashboard");
       })
       .catch((err) => next(err));
   },
