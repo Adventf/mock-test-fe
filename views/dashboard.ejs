@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <title>Dashboard</title>
+  </head>
+
+  <body>
+    <div>
+      <span>
+        <h3>Product List</h3>
+        <a href="/products" class="btn btn-info">Create New</a>
+      </span>
+
+      <div class="float-right">
+        <a href="/" class="btn color-red">Logout</a>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <% a.forEach(i => { %>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="<%= i.imageurl %>" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title"><%= i.name %></h5>
+            <p class="card-text"><%= i.price %></p>
+
+            <div class="col-sm">
+              <form action="/products/:id" method="POST">
+                <a href="/dashboard/<%= i.id %>">Edit</a>
+                <button type="submit" class="btn btn-danger">Delete</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </body>
+</html>

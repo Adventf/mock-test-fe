@@ -1,0 +1,30 @@
+h3 {
+  display: inline;
+  margin-right: 20px;
+}
+body {
+  padding: 50px;
+}
+
+.row {
+  padding-top: 30px;
+}
+
+img {
+  height: 350px;
+  padding: 10px;
+}
+.card {
+  margin: 15px;
+}
+
+.button {
+  justify-content: center;
+  display: flex;
+  margin: 15px;
+}
+
+.mt-5 {
+  display: flex;
+  justify-content: center;
+}
